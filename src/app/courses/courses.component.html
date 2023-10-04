@@ -1,0 +1,17 @@
+<h3>
+  Course List
+</h3>
+
+<p>
+  Page: {{ page }}
+</p>
+
+<div class="list-group">
+  <a *ngFor="let course of courses" [routerLink]="['/courses', course.id]" class="list-group-item list-group-item-action">
+    {{ course.name }}
+  </a>
+</div>
+
+<br>
+
+<button type="button" class="btn btn-primary" (click)="nextPage()">Next Page</button>
